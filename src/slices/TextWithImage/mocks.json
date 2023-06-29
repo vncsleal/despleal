@@ -1,0 +1,192 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"text": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading1",
+						"content": {
+							"text": "Complex"
+						}
+					},
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Deserunt aliqua ipsum commodo nostrud occaecat ut dolor anim adipisicing ullamco et. Laborum laboris culpa non excepteur velit amet qui duis dolore ut aliquip aute elit. Ut cupidatat ullamco id amet."
+						}
+					}
+				]
+			},
+			"image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9",
+					"width": 4752,
+					"height": 3168
+				},
+				"url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9?rect=1056%2C0%2C2640%2C3168&w=1000&h=1200",
+				"width": 1000,
+				"height": 1200,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 1056,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Non irure cupidatat do non proident."
+						}
+					}
+				]
+			},
+			"uid": {
+				"__TYPE__": "FieldContent",
+				"value": "paper",
+				"type": "Text"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "withButton",
+		"primary": {
+			"text": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Nulla do veniam reprehenderit enim esse consequat irure sunt elit reprehenderit. Non laboris officia non dolore consectetur ad aliquip laboris aliquip aute irure."
+						}
+					}
+				]
+			},
+			"buttonLink": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://google.com"
+				}
+			},
+			"buttonText": {
+				"__TYPE__": "FieldContent",
+				"value": "joined",
+				"type": "Text"
+			},
+			"image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a",
+					"width": 4000,
+					"height": 4000
+				},
+				"url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a",
+				"width": 4000,
+				"height": 4000,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "imageLeft",
+		"primary": {
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Qui duis veniam mollit sunt esse ipsum dolore minim.",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			},
+			"text": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Occaecat anim mollit tempor nulla do id nulla pariatur ea labore. Esse et mollit sint cillum magna exercitation minim veniam. Anim enim consectetur officia dolor dolore velit eu ad exercitation dolore."
+						}
+					}
+				]
+			},
+			"image": {
+				"origin": {
+					"id": "pCjw_ygKCv0",
+					"url": "https://images.unsplash.com/photo-1582979512210-99b6a53386f9?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw1fHxmcnVpdHxlbnwwfHx8fDE2ODgwMzA0NTB8MA&ixlib=rb-4.0.3&q=85",
+					"width": 3648,
+					"height": 5472
+				},
+				"url": "https://images.unsplash.com/photo-1582979512210-99b6a53386f9?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHw1fHxmcnVpdHxlbnwwfHx8fDE2ODgwMzA0NTB8MA&ixlib=rb-4.0.3&q=85&rect=0%2C547%2C3648%2C4378&w=1000&h=1200",
+				"width": 1000,
+				"height": 1200,
+				"edit": {
+					"background": "transparent",
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 547
+					}
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"uid": {
+				"__TYPE__": "FieldContent",
+				"value": "family",
+				"type": "Text"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	}
+]

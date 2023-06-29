@@ -1,0 +1,37 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"text": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Ipsum et esse dolore reprehenderit qui. Eu reprehenderit minim non."
+						}
+					}
+				]
+			},
+			"buttonlink": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://google.com"
+				}
+			},
+			"buttontext": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "call to action"
+			},
+			"uid": {
+				"__TYPE__": "FieldContent",
+				"value": "avoid",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]
