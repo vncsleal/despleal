@@ -10,8 +10,11 @@ import { PrismicRichText } from "@/components/PrismicRichText";
 
 const CallToAction = ({ slice }) => {
 	return (
-		<Bounded id={slice.primary.uid} as='section' className='bg-yellow-500'>
-			<div className='grid grid-flow-row items-center justify-center justify-items-center gap-8 md:grid-flow-col'>
+		<Bounded as='section' className='bg-yellow-500'>
+			<div
+				id={slice.primary.uid}
+				className='grid grid-flow-row items-center justify-center justify-items-center gap-8 md:grid-flow-col'
+			>
 				<div className='text-lg font-bold'>
 					<PrismicRichText field={slice.primary.text} />
 				</div>
