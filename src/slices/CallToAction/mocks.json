@@ -27,9 +27,15 @@
 				"value": "call to action"
 			},
 			"uid": {
-				"__TYPE__": "FieldContent",
-				"value": "avoid",
-				"type": "Text"
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Nulla in sunt laboris Lorem enim laborum anim Lorem duis veniam dolor occaecat pariatur ex do."
+						}
+					}
+				]
 			}
 		},
 		"items": []

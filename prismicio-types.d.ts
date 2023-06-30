@@ -334,16 +334,6 @@ export type AllDocumentTypes =
  */
 interface CallToActionSliceDefaultPrimary {
   /**
-   * uid field in *CallToAction → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: call_to_action.primary.uid
-   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-   *
-   */
-  uid: prismic.KeyTextField;
-  /**
    * Text field in *CallToAction → Primary*
    *
    * - **Field Type**: Rich Text
@@ -373,6 +363,16 @@ interface CallToActionSliceDefaultPrimary {
    *
    */
   buttontext: prismic.KeyTextField;
+  /**
+   * uid field in *CallToAction → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: call_to_action.primary.uid
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  uid: prismic.RichTextField;
 }
 /**
  * Default variation for CallToAction Slice
@@ -577,13 +577,13 @@ interface ImageCardsSliceDefaultPrimary {
   /**
    * uid field in *ImageCards → Primary*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
    * - **API ID Path**: image_cards.primary.uid
-   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
    *
    */
-  uid: prismic.KeyTextField;
+  uid: prismic.RichTextField;
 }
 /**
  * Item in ImageCards → Items
@@ -886,13 +886,13 @@ interface TextWithImageSliceDefaultPrimary {
   /**
    * uid field in *TextWithImage → Primary*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
    * - **API ID Path**: text_with_image.primary.uid
-   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
    *
    */
-  uid: prismic.KeyTextField;
+  uid: prismic.RichTextField;
 }
 /**
  * Default variation for TextWithImage Slice
@@ -1004,13 +1004,13 @@ interface TextWithImageSliceImageLeftPrimary {
   /**
    * uid field in *TextWithImage → Primary*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
    * - **API ID Path**: text_with_image.primary.uid
-   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
    *
    */
-  uid: prismic.KeyTextField;
+  uid: prismic.RichTextField;
 }
 /**
  * ImageLeft variation for TextWithImage Slice

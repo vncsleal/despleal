@@ -15,9 +15,15 @@
 				]
 			},
 			"uid": {
-				"__TYPE__": "FieldContent",
-				"value": "deal",
-				"type": "Text"
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Laboris sunt officia nisi excepteur ipsum mollit do mollit amet fugiat eu mollit aute. Exercitation commodo amet proident aute aute id consectetur est consectetur consectetur eiusmod eiusmod. Non occaecat quis sunt."
+						}
+					}
+				]
 			}
 		},
 		"items": [

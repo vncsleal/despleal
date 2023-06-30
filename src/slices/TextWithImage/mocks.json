@@ -55,9 +55,15 @@
 				]
 			},
 			"uid": {
-				"__TYPE__": "FieldContent",
-				"value": "paper",
-				"type": "Text"
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Velit mollit dolore ex elit est cupidatat sunt reprehenderit anim anim et. Occaecat dolor est consectetur exercitation non enim excepteur occaecat mollit cupidatat incididunt nostrud deserunt laboris adipisicing."
+						}
+					}
+				]
 			}
 		},
 		"items": [
@@ -177,9 +183,15 @@
 				"thumbnails": {}
 			},
 			"uid": {
-				"__TYPE__": "FieldContent",
-				"value": "family",
-				"type": "Text"
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Sit ex voluptate labore duis adipisicing. Est dolor sit eiusmod ullamco."
+						}
+					}
+				]
 			}
 		},
 		"items": [

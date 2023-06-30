@@ -12,10 +12,6 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "uid": {
-          "type": "Text",
-          "config": { "label": "uid", "placeholder": "" }
-        },
         "text": {
           "type": "StructuredText",
           "config": {
@@ -32,6 +28,15 @@
         "buttontext": {
           "type": "Text",
           "config": { "label": "ButtonText", "placeholder": "" }
+        },
+        "uid": {
+          "type": "StructuredText",
+          "config": {
+            "label": "uid",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
         }
       },
       "items": {}
