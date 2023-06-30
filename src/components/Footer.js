@@ -49,10 +49,10 @@ export function Footer({ navigation, settings }) {
 						href='/'
 						className='text-xl font-semibold tracking-tight'
 					>
-						<div>
+						<div className='grid justify-items-center'>
 							<PrismicNextImage
 								field={navigation.data.logo}
-								className='h-20 w-auto object-contain'
+								className='flex h-14 w-auto justify-items-center  object-contain md:h-20'
 							/>
 						</div>
 					</PrismicNextLink>

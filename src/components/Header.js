@@ -40,7 +40,7 @@ export function Header({ navigation, settings }) {
 			</div>
 
 			<Bounded as='header' yPadding='sm' className='bg-zinc-800 text-white'>
-				<div className='grid grid-flow-col items-center justify-between gap-x-6 gap-y-3 '>
+				<div className='grid grid-flow-row items-center justify-items-center gap-x-6 gap-y-8 md:grid-flow-col md:justify-between md:gap-y-3 '>
 					<PrismicNextLink
 						href='/'
 						className='text-xl font-semibold tracking-tight'
@@ -48,12 +48,12 @@ export function Header({ navigation, settings }) {
 						<div>
 							<PrismicNextImage
 								field={navigation.data.logo}
-								className='h-20 w-auto object-contain'
+								className='h-14 w-auto object-contain  md:h-20'
 							/>
 						</div>
 					</PrismicNextLink>
 					<nav>
-						<ul className='grid grid-flow-col gap-6 md:gap-10'>
+						<ul className='grid grid-flow-col justify-items-center gap-8 md:gap-10'>
 							{navigation.data?.links.map((item) => (
 								<li
 									key={prismic.asText(item.label)}

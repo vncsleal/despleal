@@ -24,12 +24,12 @@ const Hero = ({ slice }) => {
 					field={backgroundImage}
 					alt=''
 					fill={true}
-					className='pointer-events-none select-none object-cover opacity-60'
+					className='pointer-events-none w-full select-none object-cover opacity-60'
 				/>
 			)}
 			<Bounded yPadding='lg' className='relative'>
 				<div className='grid justify-items-center gap-8'>
-					<div className='max-w-2xl text-center text-6xl font-bold'>
+					<div className='max-w-2xl text-center text-3xl font-bold md:text-6xl'>
 						<PrismicRichText
 							field={slice.primary.text}
 							components={components}
@@ -41,7 +41,7 @@ const Hero = ({ slice }) => {
 					{prismic.isFilled.link(slice.primary.buttonLink) && (
 						<PrismicNextLink
 							field={slice.primary.buttonLink}
-							className=' bg-yellow-500 px-5 py-3 text-lg font-bold text-gray-800'
+							className=' bg-yellow-500 px-5 py-3 text-base font-bold text-gray-800 md:text-lg'
 						>
 							{slice.primary.buttonText || "Learn More"}
 						</PrismicNextLink>

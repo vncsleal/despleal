@@ -138,6 +138,10 @@
             }
           }
         }
+      },
+      "menuicon": {
+        "type": "Image",
+        "config": { "label": "MenuIcon", "constraint": {}, "thumbnails": [] }
       }
     }
   }

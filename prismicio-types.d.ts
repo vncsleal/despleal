@@ -64,6 +64,17 @@ interface NavigationDocumentData {
    *
    */
   address: prismic.GroupField<Simplify<NavigationDocumentDataAddressItem>>;
+  /**
+   * MenuIcon field in *Navigation*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: navigation.menuicon
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  menuicon: prismic.ImageField<never>;
 }
 /**
  * Item in Navigation → Links
