@@ -7,6 +7,7 @@ import { PrismicRichText } from "./PrismicRichText";
 import { Bounded } from "./Bounded";
 
 export function Header({ navigation, settings }) {
+	console.log(JSON.stringify(navigation.data.contacts[0].href[0].text));
 	return (
 		<div>
 			<div className='bg-yellow-500 px-6 py-2 text-zinc-800 '>
@@ -14,7 +15,7 @@ export function Header({ navigation, settings }) {
 					<ul className='hidden grid-flow-col items-center justify-between text-sm font-semibold lg:grid'>
 						{navigation.data?.contacts.map((item) => (
 							<li key={prismic.asText(item.label)} className=' '>
-								<a href={item.href}>
+								<a href={item.href[0].text}>
 									<PrismicText field={item.text} />
 								</a>
 							</li>
