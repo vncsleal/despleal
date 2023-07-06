@@ -37,7 +37,7 @@ export function Footer({ navigation, settings }) {
 					))}
 
 					{navigation.data?.socialmedia.map((item) => (
-						<div className='font-semibold  text-current'>
+						<div className='object-contain  font-semibold text-current transition duration-200 ease-in-out hover:text-zinc-400'>
 							<PrismicNextLink field={item.link}>
 								<PrismicText field={item.text} />
 							</PrismicNextLink>
@@ -52,7 +52,7 @@ export function Footer({ navigation, settings }) {
 						<div className='grid justify-items-center'>
 							<PrismicNextImage
 								field={navigation.data.logo}
-								className='flex h-14 w-auto justify-items-center  object-contain md:h-20'
+								className='flex h-14 w-auto justify-items-center   md:h-20'
 							/>
 						</div>
 					</PrismicNextLink>

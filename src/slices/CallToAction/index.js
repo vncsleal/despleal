@@ -22,7 +22,7 @@ const CallToAction = ({ slice }) => {
 					{prismic.isFilled.link(slice.primary.buttonlink) && (
 						<PrismicNextLink
 							field={slice.primary.buttonlink}
-							className=' bg-gray-800 px-5 py-3 text-base text-lg font-bold text-white'
+							className=' bg-zinc-800 px-5 py-3 text-base text-lg font-bold text-white transition duration-200 ease-in-out hover:bg-zinc-700'
 						>
 							{slice.primary.buttontext || "Learn More"}
 						</PrismicNextLink>

@@ -9,7 +9,7 @@ const TextWithImage = ({ slice }) => {
 	const image = slice.primary.image;
 
 	return (
-		<Bounded as='section' className='bg-yellow-500'>
+		<Bounded as='section' className='bg-yellow-500 text-zinc-800'>
 			<div id={slice.primary.uid} className='grid gap-12'>
 				<div>
 					{prismic.isFilled.richText(slice.primary.title) && (

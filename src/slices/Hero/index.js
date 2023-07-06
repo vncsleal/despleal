@@ -18,7 +18,7 @@ const Hero = ({ slice }) => {
 	const backgroundImage = slice.primary.backgroundImage;
 
 	return (
-		<section className='relative bg-slate-900 text-white'>
+		<section className='relative bg-zinc-900 text-white'>
 			{prismic.isFilled.image(backgroundImage) && (
 				<PrismicNextImage
 					field={backgroundImage}
@@ -41,7 +41,7 @@ const Hero = ({ slice }) => {
 					{prismic.isFilled.link(slice.primary.buttonLink) && (
 						<PrismicNextLink
 							field={slice.primary.buttonLink}
-							className=' bg-yellow-500 px-5 py-3 text-base font-bold text-gray-800 md:text-lg'
+							className=' bg-yellow-500 px-5 py-3 text-base font-bold text-zinc-800 transition duration-200 ease-in-out hover:bg-yellow-400 md:text-lg'
 						>
 							{slice.primary.buttonText || "Learn More"}
 						</PrismicNextLink>

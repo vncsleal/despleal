@@ -7,14 +7,16 @@ import { PrismicRichText } from "./PrismicRichText";
 import { Bounded } from "./Bounded";
 
 export function Header({ navigation, settings }) {
-	console.log(JSON.stringify(navigation.data.contacts[0].href[0].text));
 	return (
 		<div>
 			<div className='bg-yellow-500 px-6 py-2 text-zinc-800 '>
 				<div className='grid grid-flow-col items-center'>
 					<ul className='hidden grid-flow-col items-center justify-between text-sm font-semibold lg:grid'>
 						{navigation.data?.contacts.map((item) => (
-							<li key={prismic.asText(item.label)} className=' '>
+							<li
+								key={prismic.asText(item.label)}
+								className='transition duration-200 ease-in-out hover:text-zinc-600 '
+							>
 								<a href={item.href[0].text}>
 									<PrismicText field={item.text} />
 								</a>
@@ -29,7 +31,7 @@ export function Header({ navigation, settings }) {
 						{navigation.data?.socialmedia.map((item) => (
 							<div
 								key={prismic.asText(item.text)}
-								className='h-6 w-6 object-contain'
+								className='h-6 w-6 object-contain transition duration-200 ease-in-out hover:opacity-60'
 							>
 								<PrismicNextLink field={item.link}>
 									<PrismicNextImage field={item.icon} />
@@ -54,11 +56,11 @@ export function Header({ navigation, settings }) {
 						</div>
 					</PrismicNextLink>
 					<nav>
-						<ul className='grid grid-flow-col justify-items-center gap-8 md:gap-10'>
+						<ul className='grid grid-flow-col justify-items-center gap-4 md:gap-6'>
 							{navigation.data?.links.map((item) => (
 								<li
 									key={prismic.asText(item.label)}
-									className='font-semibold tracking-tight text-current'
+									className='bg-zinc-800 px-4 py-2 font-semibold tracking-tight text-current transition duration-200 ease-in-out hover:bg-zinc-700'
 								>
 									<PrismicNextLink field={item.link}>
 										<PrismicText field={item.label} />
