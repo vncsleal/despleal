@@ -12,19 +12,22 @@ const ImageCard = ({ item }) => {
 
 	return (
 		<li className='grid gap-8 px-4 py-8 shadow'>
-			{prismic.isFilled.image(image) && (
-				<div className=''>
-					<PrismicNextImage field={image} className='object-contain' />
-				</div>
-			)}
-			<div className='grid gap-4'>
-				<div className='text-center font-bold'>
-					<PrismicRichText field={item.text} />
-				</div>
-				<div className='font-base'>
-					<PrismicRichText field={item.content} />
+			<div>
+				{prismic.isFilled.image(image) && (
+					<div className=''>
+						<PrismicNextImage field={image} className='object-contain' />
+					</div>
+				)}
+				<div className='grid gap-4'>
+					<div className='text-center font-bold'>
+						<PrismicRichText field={item.text} />
+					</div>
+					<div className='font-base'>
+						<PrismicRichText field={item.content} />
+					</div>
 				</div>
 			</div>
+			<div></div>
 		</li>
 	);
 };
@@ -38,7 +41,7 @@ const ImageCards = ({ slice }) => {
 						<PrismicText field={slice.primary.heading} />
 					</Heading>
 				)}
-				<ul className='grid grid-cols-1 items-start gap-8 md:grid-cols-3'>
+				<ul className='grid grid-cols-1 items-stretch gap-8 md:grid-cols-3'>
 					{slice.items.map((item) => (
 						<ImageCard key={item.image.url} item={item} />
 					))}
