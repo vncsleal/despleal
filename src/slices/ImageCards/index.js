@@ -33,9 +33,10 @@ const ImageCard = ({ item }) => {
 };
 
 const ImageCards = ({ slice }) => {
+	console.log(slice.primary.uid[0].text);
 	return (
 		<Bounded as='section' className='bg-white text-zinc-800'>
-			<div id={slice.primary.uid} className='grid gap-12'>
+			<div id={slice.primary.uid[0].text} className='grid gap-12'>
 				{prismic.isFilled.richText(slice.primary.heading) && (
 					<Heading size='md' className='text-center'>
 						<PrismicText field={slice.primary.heading} />

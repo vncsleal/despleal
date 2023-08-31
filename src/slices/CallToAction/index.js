@@ -12,7 +12,7 @@ const CallToAction = ({ slice }) => {
 	return (
 		<Bounded as='section' className='bg-yellow-500'>
 			<div
-				id={slice.primary.uid}
+				id={slice.primary.uid[0].text}
 				className='grid grid-flow-row items-center justify-center justify-items-center gap-8 md:grid-flow-col'
 			>
 				<div className='text-lg font-bold'>
