@@ -1,50 +1,91 @@
-/**
- * @typedef {import("@prismicio/client").Content.ImageRowSlice} ImageRowSlice
- * @typedef {import("@prismicio/react").SliceComponentProps<ImageRowSlice>} ImageRowProps
- * @param {ImageRowProps}
- */
 import * as prismic from "@prismicio/client";
 import { PrismicText } from "@prismicio/react";
 import { PrismicNextLink, PrismicNextImage } from "@prismicio/next";
-
 import { Bounded } from "@/components/Bounded";
 import { Heading } from "@/components/Heading";
+import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import AnimatedSection from "@/components/AnimatedSection";
 
-const ImageCard = ({ item }) => {
-	const image = item.image;
-	const link = item.link;
-
-	return (
-		<li className='grid'>
-			<PrismicNextLink href={link}>
-				{prismic.isFilled.image(image) && (
-					<div className=''>
-						<PrismicNextImage
-							field={image}
-							className='h-60 w-60 object-contain '
-						/>
-					</div>
-				)}
-			</PrismicNextLink>
-		</li>
-	);
-};
 const ImageRow = ({ slice }) => {
+	const [duplicatedItems, setDuplicatedItems] = useState([]);
+	const containerRef = useRef(null);
+
+	useEffect(() => {
+		if (!slice.items || slice.items.length === 0) return;
+
+		const baseItems = slice.items;
+		const totalWidth = baseItems.length * 200; // Estimated width of images
+		const repeatCount = Math.ceil(window.innerWidth / totalWidth) + 2;
+
+		const newDuplicatedItems = Array(repeatCount)
+			.fill(null)
+			.flatMap(() => baseItems);
+		setDuplicatedItems(newDuplicatedItems);
+	}, [slice.items]);
+
 	return (
-		<Bounded as='section' className='bg-white text-zinc-800'>
-			<div className='grid gap-12'>
-				{prismic.isFilled.richText(slice.primary.title) && (
-					<Heading size='md' className='text-center'>
-						<PrismicText field={slice.primary.title} />
-					</Heading>
-				)}
-				<ul className='grid grid-flow-col grid-rows-2 items-center md:grid-rows-1 '>
-					{slice.items.map((item) => (
-						<ImageCard key={item.image.url} item={item} />
-					))}
-				</ul>
-			</div>
-		</Bounded>
+		<AnimatedSection>
+			<Bounded as='section' className='bg-white'>
+				<div className='container mx-auto px-6 py-6'>
+					{/* Section Title */}
+					{prismic.isFilled.richText(slice.primary.title) && (
+						<motion.div
+							initial={{ opacity: 0, y: -20 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							viewport={{ once: true }}
+							transition={{ duration: 0.6 }}
+							className='mb-24'
+						>
+							<Heading size='md' className='text-center text-zinc-800'>
+								<PrismicText field={slice.primary.title} />
+							</Heading>
+						</motion.div>
+					)}
+
+					{/* Infinite Sliding Carousel */}
+					<div ref={containerRef} className='relative w-full overflow-hidden'>
+						{/* Fade gradient overlays */}
+						<div className='pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-white to-transparent'></div>
+						<div className='pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-white to-transparent'></div>
+
+						{/* Image Row */}
+						<motion.div
+							className='flex'
+							animate={{
+								x: ["0%", "-50%"],
+							}}
+							transition={{
+								ease: "linear",
+								duration: 25, // Smooth scrolling duration
+								repeat: Infinity,
+							}}
+						>
+							{duplicatedItems.map((item, index) => (
+								<motion.div
+									key={`${item.image?.url}-${index}`}
+									className='group flex-shrink-0 px-4'
+									whileHover={{ scale: 1.05 }}
+								>
+									{prismic.isFilled.image(item.image) && (
+										<PrismicNextLink field={item.link} className='block'>
+											<PrismicNextImage
+												field={item.image}
+												className='h-24 w-48 object-contain 
+                          opacity-60 grayscale 
+                          transition-all duration-300 
+                          ease-in-out group-hover:opacity-100 group-hover:grayscale-0'
+												alt={item.image.alt || "Image"}
+											/>
+										</PrismicNextLink>
+									)}
+								</motion.div>
+							))}
+						</motion.div>
+					</div>
+				</div>
+			</Bounded>
+		</AnimatedSection>
 	);
 };
 
