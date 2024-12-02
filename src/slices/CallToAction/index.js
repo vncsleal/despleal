@@ -24,7 +24,7 @@ const CallToAction = ({ slice }) => {
 		<AnimatedSection>
 			<Bounded
 				as='section'
-				className='relative overflow-hidden bg-gradient-to-r from-yellow-600 to-yellow-400'
+				className='relative overflow-hidden bg-gradient-to-r from-yellow-500 to-amber-500'
 			>
 				<div
 					id={uid?.[0]?.text || ""}

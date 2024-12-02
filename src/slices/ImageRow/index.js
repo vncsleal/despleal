@@ -53,11 +53,11 @@ const ImageRow = ({ slice }) => {
 						<motion.div
 							className='flex'
 							animate={{
-								x: ["0%", "-50%"],
+								x: ["0%", "-200%"],
 							}}
 							transition={{
 								ease: "linear",
-								duration: 25, // Smooth scrolling duration
+								duration: 60, // Smooth scrolling duration
 								repeat: Infinity,
 							}}
 						>

@@ -13,10 +13,13 @@ const TextWithImage = ({ slice }) => {
 
 	return (
 		<AnimatedSection>
-			<Bounded as='section' className='bg-yellow-500 text-zinc-800'>
+			<Bounded
+				as='section'
+				className='bg-gradient-to-r from-yellow-500 to-amber-500 text-zinc-800'
+			>
 				<div
 					id={uid?.[0]?.text || ""}
-					className='container mx-auto px-6 py-6 md:px-0'
+					className='container mx-auto px-6 py-12 md:px-12'
 				>
 					{/* Section Title */}
 					{prismic.isFilled.richText(title) && (
@@ -24,7 +27,7 @@ const TextWithImage = ({ slice }) => {
 							initial={{ opacity: 0, y: -30 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							viewport={{ once: true }}
-							transition={{ duration: 0.6 }}
+							transition={{ duration: 0.6, ease: "easeInOut" }}
 							className='mb-24'
 						>
 							<Heading size='lg' className='text-center text-zinc-900'>
@@ -34,25 +37,26 @@ const TextWithImage = ({ slice }) => {
 					)}
 
 					{/* Content Grid */}
-					<div className='grid grid-cols-1 items-center gap-12 md:grid-cols-2'>
+					<div className='grid grid-cols-1 items-center gap-16 md:grid-cols-2'>
 						{/* Image Section */}
 						{prismic.isFilled.image(image) && (
 							<motion.div
-								className={`overflow-hidden rounded-lg shadow-lg ${
+								className={`relative overflow-hidden rounded-lg shadow-2xl ${
 									isImageLeft ? "md:order-1" : "md:order-2"
 								}`}
 								initial={{ opacity: 0, x: isImageLeft ? -50 : 50 }}
 								whileInView={{ opacity: 1, x: 0 }}
 								viewport={{ once: true }}
-								transition={{ duration: 0.6, delay: 0.2 }}
-								whileHover={{ scale: 1.05 }}
+								transition={{ duration: 0.6, delay: 0.2, ease: "easeInOut" }}
+								whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
 							>
 								<PrismicNextImage
 									field={image}
-									sizes='100vw'
+									sizes='(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw'
 									className='h-auto w-full object-cover'
 									alt={image.alt || "Text with Image"}
 								/>
+								<div className='absolute inset-0 bg-gradient-to-r from-transparent to-white/30' />
 							</motion.div>
 						)}
 
@@ -65,9 +69,9 @@ const TextWithImage = ({ slice }) => {
 								initial={{ opacity: 0, x: isImageLeft ? 50 : -50 }}
 								whileInView={{ opacity: 1, x: 0 }}
 								viewport={{ once: true }}
-								transition={{ duration: 0.6, delay: 0.4 }}
+								transition={{ duration: 0.6, delay: 0.4, ease: "easeInOut" }}
 							>
-								<PrismicRichText field={text} />
+								<PrismicRichText field={text} className='text-zinc-900' />
 							</motion.div>
 						)}
 					</div>
