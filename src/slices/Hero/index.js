@@ -52,6 +52,7 @@ const Hero = ({ slice }) => {
 						alt=''
 						fill
 						className='pointer-events-none w-full select-none object-cover opacity-40'
+						loading='lazy'
 					/>
 				</motion.div>
 			)}
