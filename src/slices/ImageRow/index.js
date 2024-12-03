@@ -75,7 +75,6 @@ const ImageRow = ({ slice }) => {
                           opacity-60 grayscale 
                           transition-all duration-300 
                           ease-in-out group-hover:opacity-100 group-hover:grayscale-0'
-												alt={item.image.alt || "Image"}
 											/>
 										</PrismicNextLink>
 									)}

@@ -51,7 +51,6 @@ export function Header({ navigation }) {
 								<PrismicNextImage
 									field={item.icon}
 									className='h-6 w-6 object-contain'
-									alt={`${prismic.asText(item.text)} icon`}
 								/>
 							</PrismicNextLink>
 						))}
@@ -67,7 +66,6 @@ export function Header({ navigation }) {
 						<PrismicNextImage
 							field={navigation.data.logo}
 							className='h-12 w-auto object-contain md:h-16'
-							alt='Logo'
 						/>
 					</PrismicNextLink>
 

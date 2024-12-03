@@ -97,7 +97,6 @@ export function Footer({ navigation, settings }) {
 						>
 							<PrismicNextImage
 								field={logo}
-								alt='Despachante Leal Logo'
 								className='h-16 w-auto object-contain'
 							/>
 						</PrismicNextLink>

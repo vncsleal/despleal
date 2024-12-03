@@ -54,7 +54,6 @@ const TextWithImage = ({ slice }) => {
 									field={image}
 									sizes='(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw'
 									className='h-auto w-full object-cover'
-									alt={image.alt || "Text with Image"}
 								/>
 								<div className='absolute inset-0 bg-gradient-to-r from-transparent to-white/30' />
 							</motion.div>
@@ -71,7 +70,9 @@ const TextWithImage = ({ slice }) => {
 								viewport={{ once: true }}
 								transition={{ duration: 0.6, delay: 0.4, ease: "easeInOut" }}
 							>
-								<PrismicRichText field={text} className='text-zinc-900' />
+								<div className='text-zinc-900'>
+									<PrismicRichText field={text} />
+								</div>
 							</motion.div>
 						)}
 					</div>

@@ -27,7 +27,6 @@ const ImageCard = ({ item, index }) => {
 						field={image}
 						fill
 						className='h-full w-full object-cover transition-transform duration-500 group-hover:scale-110'
-						alt={image.alt || "Image Card"}
 					/>
 				</div>
 			)}
